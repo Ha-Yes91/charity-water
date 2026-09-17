@@ -1,64 +1,136 @@
-# charity: water — Student Landing Page Campaign
-A high-converting, mobile-responsive landing page concept and campaign strategy designed for **charity: water** to engage college undergraduates (Gen Z).
----
-## 📌 Project Overview
-* **Role:** Digital Marketing Associate
-* **Author:** Raymond Hayes
-* **Date:** September 2026
-* **Objective:** Design a targeted digital campaign and landing page experience that lowers friction for Gen Z micro-donations through radical transparency and campus-relatable messaging.
----
-## 🎯 Target Audience: Gen Z Undergraduates (Ages 18–24)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>charity: water | Give Clean Water</title>
+  
+  <!-- Google Fonts: Montserrat (Headlines) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'water-yellow': '#FFC907',
+            'deep-navy': '#1A365D',
+            'clean-blue': '#29B6F6',
+            'off-white': '#FAFAFA',
+            'charcoal': '#212529',
+          },
+          fontFamily: {
+            'montserrat': ['Montserrat', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-off-white text-charcoal font-inter min-h-screen flex flex-col">
 
-| Dimension | Details |
-| :--- | :--- |
-| **Who They Are** | College students balancing coursework, entry-level jobs, student loans, and strict budgets. Digitally fluent, socially conscious, and active on TikTok and Instagram. |
-| **What They Seek** | Accessible, low-barrier opportunities to make an impact without pressure for large recurring pledges. |
-| **Key Influences** | Peer recommendations, social proof ("receipts"), creator content, and quick checkout options (Apple Pay, Venmo). |
-| **Friction Points** | Financial hesitation (*"Can my $5 really make a difference?"*) and institutional skepticism regarding nonprofit overhead. |
-| **Conversion Levers** | Relatable micro-giving framed around daily habits (e.g., the cost of an iced coffee), backed by 100% financial transparency and GPS-verified impact. |
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm w-full py-4 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Logo Placeholder -->
+      <div class="text-deep-navy font-montserrat font-bold text-xl tracking-tight">
+        charity: water
+      </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8 text-sm font-semibold text-charcoal">
+        <a href="#" class="hover:text-clean-blue transition">The 100% Model</a>
+        <a href="#" class="hover:text-clean-blue transition">Track Projects</a>
+        <a href="#" class="hover:text-clean-blue transition">Campus Chapters</a>
+      </nav>
+      <!-- Mobile Menu Icon (Placeholder) -->
+      <button class="md:hidden text-deep-navy">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
 
----
-## 💡 Campaign Messaging & Hook
-> **"Ditch one coffee. Fund a well. Get the receipts."**
-* **The Problem:** Over 703 million people live without safe drinking water.
-* **The Solution:** charity: water’s 100% model ensures private donors cover operating costs so 100% of public donations fund water projects.
-* **The Proof:** Every project is mapped via satellite GPS and documented with verified field photos of the exact community served.
----
-## 🎨 Visual Identity & Brand System
-### Color Palette
+  <!-- Main Hero Section -->
+  <main class="flex-grow flex items-center py-12 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Column: Copy & Value Proposition -->
+      <div class="space-y-6">
+        <h1 class="font-montserrat font-bold text-5xl lg:text-6xl text-deep-navy leading-tight">
+          Ditch one coffee.<br>
+          Fund a well.<br>
+          <span class="text-water-yellow">Get the receipts.</span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-lg text-charcoal">
+          100% of your donation funds clean water projects with proof you can see.
+        </p>
+        
+        <a href="#" class="inline-block mt-4 text-clean-blue font-semibold hover:underline">
+          SEE HOW WE TRACK EVERY DOLLAR WITH GPS &rarr;
+        </a>
+      </div>
 
-| Color | Hex Code | Role & Usage |
-| :--- | :--- | :--- |
-| **Water Yellow** | `#FFC907` | Primary CTAs, focal points, brand optimism |
-| **Deep Navy** | `#1A365D` | Headers, foundational elements, trust/authority |
-| **Clean Water Blue** | `#29B6F6` | Accent elements, highlights, freshness |
-| **Off-White** | `#FAFAFA` | Clean background canvas for readability |
-| **Charcoal** | `#212529` | High-contrast body copy |
+      <!-- Right Column: Donation Widget Mockup -->
+      <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full mx-auto lg:mx-0 border-t-4 border-water-yellow">
+        <h2 class="font-montserrat font-bold text-2xl text-deep-navy mb-1">Give clean water</h2>
+        <p class="text-sm text-gray-500 mb-6">Choose an amount</p>
+        
+        <!-- Donation Amounts -->
+        <div class="grid grid-cols-4 gap-3 mb-6">
+          <button class="bg-deep-navy text-white font-bold py-3 rounded-lg border-2 border-deep-navy transition">
+            $5
+          </button>
+          <button class="bg-white text-charcoal font-semibold py-3 rounded-lg border-2 border-gray-200 hover:border-deep-navy transition">
+            $10
+          </button>
+          <button class="bg-white text-charcoal font-semibold py-3 rounded-lg border-2 border-gray-200 hover:border-deep-navy transition">
+            $20
+          </button>
+          <button class="bg-white text-charcoal font-semibold py-3 rounded-lg border-2 border-gray-200 hover:border-deep-navy transition">
+            Custom
+          </button>
+        </div>
 
-### Typography
-* **Headlines:** `Montserrat` (Bold / 700) — Bold, punchy, modern.
-* **Body Copy:** `Inter` (Regular / 400) — Clean, highly legible across mobile screens.
-### Photography Principles
-* **Dignity Over Guilt:** Highlighting community joy, resilience, and local ownership rather than poverty tropes.
-* **Shared Connection:** Authentic, relatable campus peer moments.
-* **Proof of the Solution:** Clear imagery of operational, community-led water systems.
----
-## 🚀 UX & Conversion Rate Optimization (CRO)
-### Key Page Features
-* **Tiered Micro-Donation Pills:** Preset amounts (`$5`, `$10`, `$20`, `Custom`) minimize decision fatigue, anchoring the minimum tier to the cost of a coffee.
-* **Primary Call-to-Action:** 
-  * `Send $5 to Clean Water`
-  * Clarifies the precise cost, action, and outcome in a single button.
-* **Secondary Educational CTA:**
-  * `See How We Track Every Dollar with GPS`
-  * Directly resolves overhead skepticism.
-* **One-Tap Payments:** Direct integration with **Apple Pay** and **Venmo** eliminates checkout form fatigue.
----
-## 📱 Tech Stack & Implementation (Suggested)
-* **Markup/Styling:** HTML5, Tailwind CSS / Sass
-* **Typography:** Google Fonts (`Montserrat`, `Inter`)
-* **Assets:** Optimized SVG icons, WebP imagery
-* **Payment Integrations:** Stripe Elements, Apple Pay API, Braintree / Venmo Web SDK
----
-## 🏷️ Tags
-`#DigitalMarketing` `#UXDesign` `#charitywater` `#NonprofitStrategy` `#ConversionDesign` `#GenZMarketing`
+        <!-- Primary CTA -->
+        <button class="w-full bg-water-yellow hover:bg-yellow-500 text-charcoal font-montserrat font-bold text-lg py-4 rounded-lg shadow-md transition mb-6">
+          Send $5 to Clean Water
+        </button>
+
+        <!-- Frictionless Payment Badges (Placeholders) -->
+        <div class="text-center">
+          <p class="text-xs text-gray-400 mb-3 uppercase tracking-wider">Fast, secure checkout</p>
+          <div class="flex justify-center space-x-4">
+            <span class="bg-gray-100 text-gray-700 text-sm font-semibold py-1 px-3 rounded-md"> Pay</span>
+            <span class="bg-[#008CFF] text-white text-sm font-semibold py-1 px-3 rounded-md italic">venmo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Trust Indicators / Proof Section -->
+  <section class="bg-deep-navy text-off-white py-12 px-6 md:px-12 mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h3 class="font-montserrat font-bold text-water-yellow text-xl mb-2">100% MODEL</h3>
+        <p class="text-sm opacity-90">100% of public donations fund clean water projects.</p>
+      </div>
+      <div>
+        <h3 class="font-montserrat font-bold text-water-yellow text-xl mb-2">GPS TRACKING</h3>
+        <p class="text-sm opacity-90">Every project is GPS tracked and verified.</p>
+      </div>
+      <div>
+        <h3 class="font-montserrat font-bold text-water-yellow text-xl mb-2">TRUSTED PAYMENTS</h3>
+        <p class="text-sm opacity-90">Secure checkout with Apple Pay and Venmo.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
